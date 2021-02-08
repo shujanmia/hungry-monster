@@ -23,7 +23,7 @@ document.getElementById('search-btn').addEventListener('click', searchClick =>{
             </div>
             `;
            // console.log(meals);
-            //console.log(html)
+            //console.log(mealInfo)
             let sec = document.createElement("div")
             sec.innerHTML = html2;
             sec.setAttribute("id", meal.idMeal);
@@ -31,30 +31,30 @@ document.getElementById('search-btn').addEventListener('click', searchClick =>{
             sec.setAttribute("class", "col-md-3 mb-5 m-auto")
             sec.addEventListener("click",()=>{
                 console.log(meal)
-                let html = `
+                let mealInfo = `
                 <div class="row bg-light border border-secondary rounded" style="--bs-gutter-x: 0;">
                     <div class="col-md-4 " style="">
                         <img class="img-top" src="${meal.strMealThumb}" alt="${meal.strMeal}" style="width:100%">
                         </div>
                         <div class="col-md-8" style="padding-left: 15px; padding-top: 10px">
                         <h4 class="card-title">${meal.strMeal}</h4>
-                        <b>Ingredients</b>
+                        <b>Ingredients:</b>
                         <ul>`;
-                    for(let i = 1; i < 20; i++){
+                    for(let i = 1; i <= 10; i++){
                         let str = "strIngredient"+i;
                         if( meal[str] == "" ) break;
-                        html += `<li>`;
-                        html += meal[str]
-                        html + ` </li>`
+                        mealInfo += `<li>`;
+                        mealInfo += meal[str]
+                        mealInfo + ` </li>`
                     }
                         
-                html += `  
+                mealInfo += `  
                         </ul>
                         
                     </div>
                     </div>
                 `;
-                singleMeal.innerHTML = html;
+                singleMeal.innerHTML = mealInfo;
 
             })
             meals.appendChild(sec);
