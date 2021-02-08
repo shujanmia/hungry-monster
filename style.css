@@ -1,0 +1,41 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    padding-top: 2.5rem;
+}
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#image-size{
+    height: 80px;
+    width: 108px;
+}
+.link-text{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.nav-item{
+    margin-left: 18px;
+}
+#meal-input{
+    background-color: #F8F7F5;
+}
+#search-btn{
+    width: 96px;
+    height: 47px;
+}
+#box-size{
+    width: 461px;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+
